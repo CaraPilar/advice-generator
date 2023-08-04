@@ -1,0 +1,49 @@
+// @import '_reset';
+// @import '_variables';
+
+#__next {
+  height: 100%;
+}
+html,
+body {
+  height: 100%;
+}
+
+main,
+.chakra-offset-slide {
+  height: 100%;
+}
+
+// h1 {
+//     color: $secondary-text-color;
+//     text-align:center;
+//     font-size: 50px;
+//     margin: 20px 0;
+//     font-weight: bold;
+// }
+// .advice-container {
+//     background-color: $background-color-main;
+//     padding: 25px;
+//     text-align: center;
+//     min-height: 300px;
+//     border-radius: 20px;
+//     position: relative;
+
+//     .advice-heading {
+//         color: $secondary-text-color;
+//         text-transform: uppercase;
+//         margin: 20px 0;
+//     }
+//     .advice-quote {
+//         color: $primary-text-color;
+//         font-size: 28px;
+//         font-weight: bold;
+//     }
+//     .advice-generator-button {
+//         position: absolute;
+//         bottom: -20px;
+//         left: 0;
+//         right: 0;
+//         margin: auto;
+//     }
+// }
