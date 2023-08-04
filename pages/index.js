@@ -1,8 +1,23 @@
 import { useState } from 'react'
 
 export default function Home({ data }) {
-  // const {id, advice} = data.slip;
   const [adviceData, setAdviceData] = useState(data.slip)
+  const [disabled, setDisabled] = useState(false);
+  const [isLoading, setLoading] = useState(false)
+
+  const generateAdvice = () => {
+    setLoading(true);
+    setDisabled(true)
+    fetch('https://api.adviceslip.com/advice')
+      .then((res) => res.json())
+      .then((data) => {
+        setTimeout(() => {
+            setAdviceData(data.slip)
+            setDisabled(false)
+            setLoading(true)
+          }, 2000)
+        })  
+  }
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -15,6 +30,7 @@ export default function Home({ data }) {
         {adviceData.advice}
       </div>
       <div className="advice-generator-button">
+        <button disabled={disabled} onClick={(generateAdvice)}>Give Me Advice!</button>
       </div>
      </div>
 
