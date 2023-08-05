@@ -45,6 +45,8 @@ Users should be able to:
 
 - Add social sharing buttons
 - Search advice for keywords
+- Improve animation and transitions
+- Filter profanity
 
 
 ## Author

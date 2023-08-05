@@ -8,6 +8,7 @@ import {
   Text,
   IconButton,
   Spinner,
+  Image
 } from "@chakra-ui/react";
 import DiceIcon from "../components/DiceIcon";
 
@@ -16,10 +17,13 @@ export default function Home({ data }) {
   const [isLoading, setLoading] = useState(false);
 
   const generateAdvice = () => {
+    // function to generate random advice upon user interaction
     setLoading(true);
     fetch("https://api.adviceslip.com/advice")
       .then((res) => res.json())
       .then((data) => {
+        // AdviceSlip API caches results for 2 seconds, any repeat request within 2 seconds returns same advice
+        // To avoid recieving the same advice, we use setTimeout for 2 seconds.
         setTimeout(() => {
           setAdviceData(data.slip);
           setLoading(false);
@@ -62,6 +66,7 @@ export default function Home({ data }) {
           ) : (
             <Text fontSize={28} color="#cee3e9" fontWeight={800} pr={3} pl={3}>
               {adviceData.advice}
+              <Image src="/pattern-divider-desktop.svg" />
             </Text>
           )}
         </CardBody>
@@ -83,7 +88,6 @@ export default function Home({ data }) {
               boxShadow: "0px 0px 15px #52ffa8",
               animation: "pulse 2s infinite",
             }}
-            // disabled={disabled}
             onClick={generateAdvice}
           />
         </CardFooter>
