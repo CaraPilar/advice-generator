@@ -92,7 +92,7 @@ export default function Home({ data }) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   // Call an external API endpoint to get advice
   const res = await fetch("https://api.adviceslip.com/advice");
   const data = await res.json();
