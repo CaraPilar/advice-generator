@@ -66,7 +66,7 @@ export default function Home({ data }) {
           ) : (
             <Text fontSize={28} color="#cee3e9" fontWeight={800} pr={3} pl={3}>
               {adviceData.advice}
-              <Image src="/pattern-divider-desktop.svg" />
+              <Image display="inline-block" src="/pattern-divider-desktop.svg" />
             </Text>
           )}
         </CardBody>
