@@ -11,6 +11,8 @@ import {
   Image
 } from "@chakra-ui/react";
 import DiceIcon from "../components/DiceIcon";
+import SocialShare from "../components/SocialShare";
+
 
 export default function Home({ data }) {
   const [adviceData, setAdviceData] = useState(data.slip);
@@ -64,10 +66,13 @@ export default function Home({ data }) {
               size="xl"
             />
           ) : (
+            <Box>
             <Text fontSize={28} color="#cee3e9" fontWeight={800} pr={3} pl={3}>
               {adviceData.advice}
               <Image display="inline-block" src="/pattern-divider-desktop.svg" />
+              <SocialShare advice={adviceData.advice}/>
             </Text>
+            </Box>
           )}
         </CardBody>
         <CardFooter textAlign="center" position="relative">

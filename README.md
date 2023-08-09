@@ -43,10 +43,10 @@ Users should be able to:
 
 ### TODOs
 
-- Add social sharing buttons
-- Search advice for keywords
-- Improve animation and transitions
-- Filter profanity
+- [x] Add social sharing buttons
+- [] Search advice for keywords
+- [] Improve animation and transitions
+- [] Filter profanity
 
 
 ## Author
