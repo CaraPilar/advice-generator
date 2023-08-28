@@ -44,9 +44,9 @@ Users should be able to:
 ### TODOs
 
 - [x] Add social sharing buttons
-- [] Search advice for keywords
-- [] Improve animation and transitions
-- [] Filter profanity
+- [ ] Search advice for keywords
+- [ ] Improve animation and transitions
+- [x] Filter profanity
 
 
 ## Author
