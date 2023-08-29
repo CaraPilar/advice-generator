@@ -14,13 +14,13 @@ import DiceIcon from "../components/DiceIcon";
 import SocialShare from "../components/SocialShare";
 
 export default function Home({ data, error= null }) {
+  const [adviceData, setAdviceData] = useState(data.slip);
+  const [isLoading, setLoading] = useState(false);
+
   if(!!error) {
     console.log(error)
     return  {error}
   }
-
-  const [adviceData, setAdviceData] = useState(data.slip);
-  const [isLoading, setLoading] = useState(false);
 
   const generateAdvice = async () => {
     // function to generate random advice upon user interaction
